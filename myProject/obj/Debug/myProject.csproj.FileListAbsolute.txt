@@ -1,0 +1,14 @@
+c:\users\vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\myProject.exe.config
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\myProject.exe
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\myProject.pdb
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\MySql.Data.dll
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\Google.Protobuf.dll
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\Renci.SshNet.dll
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\bin\Debug\MySql.Data.xml
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\obj\Debug\myProject.csprojResolveAssemblyReference.cache
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\obj\Debug\myProject.Form1.resources
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\obj\Debug\myProject.Properties.Resources.resources
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\obj\Debug\myProject.csproj.GenerateResource.Cache
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\obj\Debug\myProject.exe
+C:\Users\Vyachesav\documents\visual studio 2015\Projects\myProject\myProject\obj\Debug\myProject.pdb
