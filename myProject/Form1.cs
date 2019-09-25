@@ -34,8 +34,37 @@ namespace myProject
         {
 
             cnn.Open();
-            MessageBox.Show("Connection Open !");
+           // MessageBox.Show("Connection Open !");
             cnn.Clone();
+            
+            MySqlCommand command;
+            MySqlDataReader dateReader;
+            String sql, Output = "";
+            sql = "Select TutorialID,TutorialName from tutorial";
+            command = new MySqlCommand(sql,cnn);
+            dateReader = command.ExecuteReader();
+
+            while (dateReader.Read()) {
+                Output = Output + dateReader.GetValue(0) + " - " + dateReader.GetValue(1) + "\n";
+            }
+            MessageBox.Show(Output);
+
+            dateReader.Close();
+            command.Dispose();
+            cnn.Close();
+           
+            
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            
+
+            sql = "Insert into testdb.tutorial (TutorialID,TutorialName) values(3,'" + "VEB.NET" + "')";
+
+            command = new MySqlCommand(sql,cnn);
+            adapter.InsertCommand = new MySqlCommand(sql,cnn);
+            adapter.InsertCommand.ExecuteNonQuery();
+
+            command.Dispose();
+            cnn.Close();
         }
     }
 }
