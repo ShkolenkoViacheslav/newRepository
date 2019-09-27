@@ -35,14 +35,15 @@ namespace myProject
 
             cnn.Open();
            // MessageBox.Show("Connection Open !");
-            cnn.Clone();
-            
-            MySqlCommand command;
-            MySqlDataReader dateReader;
+            cnn.Close();
+
+
+
+            /*
             String sql, Output = "";
-            sql = "Select TutorialID,TutorialName from tutorial";
-            command = new MySqlCommand(sql,cnn);
-            dateReader = command.ExecuteReader();
+           sql = "Select TutorialID,TutorialName from tutorial";
+           command = new MySqlCommand(sql,cnn);
+           dateReader = command.ExecuteReader();
 
             while (dateReader.Read()) {
                 Output = Output + dateReader.GetValue(0) + " - " + dateReader.GetValue(1) + "\n";
@@ -52,19 +53,37 @@ namespace myProject
             dateReader.Close();
             command.Dispose();
             cnn.Close();
-           
+            */
             
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
             
+                MySqlCommand command;
+                MySqlDataReader dateReader;
 
-            sql = "Insert into testdb.tutorial (TutorialID,TutorialName) values(3,'" + "VEB.NET" + "')";
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                String sql = "";
+                // Create TutorialID = 3, TutorialName = VEB.NET
+                // sql = "Insert into testdb.tutorial (TutorialID,TutorialName) values(3,'" + "VEB.NET" + "')";
+                // Change TutorialName = FFF.NET,TutorialID=3
+                // sql = "Update tutorial set TutorialName = '"+"FFF.NET"+"' where TutorialID=3";
 
-            command = new MySqlCommand(sql,cnn);
-            adapter.InsertCommand = new MySqlCommand(sql,cnn);
-            adapter.InsertCommand.ExecuteNonQuery();
 
-            command.Dispose();
-            cnn.Close();
+                sql = "Delete from [tutorial] where TutorialID=3";
+
+                command = new MySqlCommand(sql, cnn);
+                adapter.DeleteCommand = new MySqlCommand(sql, cnn);
+                adapter.DeleteCommand.ExecuteNonQuery();
+                command.Dispose();
+                cnn.Close();
+            
+            /*Change TutorialName = FFF.NET,TutorialID=3
+             adapter.UpdateCommand = new MySqlCommand(sql,cnn);
+            adapter.UpdateCommand.ExecuteNonQuery();*/
+
+            /*Create TutorialID = 3, TutorialName = VEB.NET
+             adapter.InsertCommand = new MySqlCommand(sql,cnn);
+             adapter.InsertCommand.ExecuteNonQuery();*/
+
+
         }
     }
 }
